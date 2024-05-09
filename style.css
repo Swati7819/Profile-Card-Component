@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    position: absolute;
+    height: 350px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "YOPQ" 300;
+    
+
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card .part-1 {
+    height: 50%;
+    position: relative;
+
+}
+
+.card .part-1 .top-image {
+    border-radius: 10px 10px 0px 0px;
+    max-width: 100%;
+}
+
+.card .part-2 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.card .part-1 .center-image {
+    border-radius: 50%;
+    outline: 5px solid white;
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    width: 30%;
+}
+
+
+.card .part-2 .flexbox-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+hr {
+    border: 1px solid rgb(239, 239, 239);
+    margin-top: 1.5em;
+}
+
+.card .footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.flexbox-1>p {
+    font-weight: 700;
+}
+
+.flexbox-1>p span {
+    font-size: 18px;
+    color: rgb(166, 165, 169);
+    font-weight: 400;
+}
+
+.flexbox-1>span {
+    font-size: 12px;
+    color: rgb(166, 165, 169);
+
+}
+
+body section {
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    overflow: hidden;
+    background-color: rgb(25, 161, 173);
+}
+
+.top {
+    grid-column: 1 / 7;
+    grid-row: 1 / 4;
+    background-image: url(/static/images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.bottom {
+    grid-column: 6 / 13;
+    grid-row: 4 / 6;
+    background-image: url(/static/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+
+
+ @media screen and (min-width:600px) and (max-width:800px) {
+
+    body section {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        height: 100vh;
+    }
+
+    .top {
+        grid-column: 1 / 5;
+        grid-row: 1 / 5;
+    }
+
+
+    .bottom {
+        grid-column: 5 / 9;
+        grid-row: 5 / 9;
+    }
+
+
+
+
+
+
+} 
+
+@media screen and (min-width:800px) and (max-width:1024px) {
+    body section {
+        height: 70vh;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:599px) {
+
+    body section {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        height: 100vh;
+    }
+
+     
+    
+    .top {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+    }
+
+    .bottom {
+        grid-column: 4 / 7;
+        grid-row: 4 / 7;
+    }
+
+
+
+
+
+
+}
